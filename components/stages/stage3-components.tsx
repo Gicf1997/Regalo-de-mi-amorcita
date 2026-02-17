@@ -230,7 +230,7 @@ export function DiracBuildup({ onComplete }: { onComplete: () => void }) {
 
   const parts = [
     { symbol: 'i', label: 'Unidad imaginaria', desc: 'Lo que no vemos pero sentimos' },
-    { symbol: '∂̸', label: 'Derivada parcial', desc: 'El cambio constante del universo' },
+    { symbol: '∂/', label: 'Derivada parcial', desc: 'El cambio constante del universo' },
     { symbol: 'm', label: 'Masa', desc: 'Lo que nos da presencia en el mundo' },
     { symbol: 'ψ', label: 'Función de onda', desc: 'La esencia de toda partícula' },
   ];
