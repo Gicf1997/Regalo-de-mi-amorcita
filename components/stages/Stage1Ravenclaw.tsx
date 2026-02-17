@@ -15,33 +15,33 @@ export default function Stage1Ravenclaw({ onNext }: Stage1RavenclawProps) {
   const [displayedText, setDisplayedText] = useState('');
   const [showResult, setShowResult] = useState(false);
 
-  const texts = [
+  const texts = React.useMemo(() => [
     'Hmm... una mente que domina ecuaciones...',
     
     'Detectando pasión por los números y las coordenadas...',
-
+    
     'Un piano resuena en tu alma, arte y lógica en armonía...',
-
+    
     'Hmm... una estratega nata, siempre un paso adelante en el ajedrez de la vida...',
-
+    
     'Inteligente, elocuente, hermosa por dentro y por fuera...',
-
+    
     'Difícil... muy difícil decisión.',
     'Veo talento, y una clara visión.',
-
+    
     'Hay bondad, sí, pero no es lo que te guía',
     'es la sed de saber lo que en ti confía.',
     'No te asustan los retos de la mente',
     'descifras enigmas, eres diferente.',
     'Tu espada es la lógica, tu escudo el saber',
     'en los libros y estrellas está tu poder.',
-
+    
     'Para aquellos con mente aguda y sagaz',
     'que encuentran en la duda su propia paz',
     'he tomado mi decisión, y la ley no cambio:',
-
+    
     '¡TU CAMINO ES RAVENCLAW!'
-  ];
+  ], []); // Added empty dependency array
 
   useEffect(() => {
     if (textPhase < texts.length) {
@@ -66,7 +66,7 @@ export default function Stage1Ravenclaw({ onNext }: Stage1RavenclawProps) {
 
       return () => clearInterval(interval);
     }
-  }, [textPhase]);
+  }, [textPhase, texts]);
 
   return (
     <motion.div
