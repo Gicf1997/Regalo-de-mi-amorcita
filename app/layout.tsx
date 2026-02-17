@@ -20,20 +20,32 @@ const notoSansMath = Noto_Sans_Math({
 });
 
 export const metadata: Metadata = {
-  title: 'Protocolo 14F - The Queen & The Dragon',
-  description: 'Una experiencia interactiva romántica',
+  title: 'Love & Physics',
+  description: 'Una aventura romántica a través de acertijos, matemáticas y física cuántica',
+  icons: {
+    icon: '/sprites/portada.jpg',
+  },
   openGraph: {
+    title: 'Love & Physics',
+    description: 'Una aventura romántica a través de acertijos, matemáticas y física cuántica',
     images: [
       {
-        url: 'https://bolt.new/static/og_default.png',
+        url: '/sprites/portada.jpg',
+        width: 800,
+        height: 800,
+        alt: 'Love & Physics',
       },
     ],
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
+    title: 'Love & Physics',
+    description: 'Una aventura romántica a través de acertijos, matemáticas y física cuántica',
     images: [
       {
-        url: 'https://bolt.new/static/og_default.png',
+        url: '/sprites/portada.jpg',
+        alt: 'Love & Physics',
       },
     ],
   },
