@@ -80,7 +80,7 @@ export function EulerIdentity({ onComplete }: { onComplete: () => void }) {
             Euler unió cinco mundos diferentes de las matemáticas en una sola ecuación perfecta.
           </p>
           <p className="text-gray-400 font-montserrat text-sm italic">
-            Como nosotros: física y matemáticas, dragón y reina, juntos creamos algo perfecto.
+            Como nosotros: física y matemáticas, juntos creamos algo perfecto. Si el mundo se pone en contra tuyo, entonces seremos vos y yo contra el mundo. Siempre.
           </p>
           <motion.button
             initial={{ opacity: 0 }}

@@ -123,8 +123,8 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
           transition={{ delay: 8 }}
           className="text-center text-gray-500 font-montserrat text-sm italic pb-8"
         >
-         Hay quien dice mañana&apos; para no decidir, yo te digo ahora&apos; porque ya te elegí.
-            Soy tu compañero, tu refugio y, sobre todo, tu hombre.
+         Hay quien dice &apos;mañana&apos; para no decidir, yo te digo &apos;ahora&apos; porque ya te elegí.
+            Soy tu novio, tu amorcito, tu refugio y, sobre todo, tu hombre.
         </motion.p>
       </div>
     </motion.div>

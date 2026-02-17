@@ -52,10 +52,10 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
           <CharacterSprite character="natsu" />
           <div className="text-left">
             <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-[#d4af37]">
-              El Enigma del Dragón
+              Ecuaciones que cambiaron el mundo
             </h2>
             <p className="text-sm text-gray-400 font-montserrat">
-              Matemáticas, Física y Amor
+              Natsu quiere mostrarte algo muy especial, fuego y magia envueltos en matemáticas.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <Heart className="w-6 h-6 text-pink-400" />
                   <h3 className="font-cinzel text-xl md:text-2xl text-pink-400">
-                    Un Regalo Matemático
+                    Las funciones trazan el mapa de nuestro amor.
                   </h3>
                 </div>
                 <p className="text-gray-300 font-montserrat text-sm leading-relaxed">
@@ -136,7 +136,7 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
               <div className="flex items-center justify-center gap-2 mb-6">
                 <Atom className="w-6 h-6 text-orange-400" />
                 <h3 className="font-cinzel text-xl md:text-2xl text-orange-400">
-                  La Física del Amor
+                  La Física cuantica y el amor entrelazado
                 </h3>
               </div>
 
@@ -253,7 +253,7 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
                   transition={{ delay: 2 }}
                   className="text-orange-300 font-montserrat italic"
                 >
-                  Así están nuestras almas: entrelazadas en el tejido del espacio-tiempo.
+                  Así de fuerte y bonito es lo que tenemos una conexión que trasciende el espacio y el tiempo.
                 </motion.p>
               </div>
 
@@ -265,7 +265,7 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
                 className="mx-auto mt-6 flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-800 rounded-lg hover:scale-105 transition-transform border border-orange-400/50"
               >
                 <InfinityIcon className="w-5 h-5 text-white" />
-                <span className="font-cinzel text-base text-white">Último Desafío</span>
+                <span className="font-cinzel text-base text-white">Último Nivel</span>
               </motion.button>
             </motion.div>
           )}
@@ -283,13 +283,13 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
               <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                 <label className="block text-center">
                   <span className="text-lg text-orange-300 font-montserrat block mb-3">
-                    ¿Cómo se llama ese número imposible?
+                    ¿Cómo se llama ese número?
                   </span>
                   <motion.input
                     type="text"
                     value={answer}
                     onChange={(e) => setAnswer(e.target.value)}
-                    placeholder="Escribe su nombre..."
+                    placeholder="No cabe en el universo..."
                     className="w-full max-w-sm mx-auto block px-5 py-3 bg-black/50 border-2 border-orange-500/40 rounded-lg text-white text-center text-lg font-montserrat focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-500/50"
                     animate={showError ? { x: [-8, 8, -8, 8, 0] } : {}}
                     transition={{ duration: 0.4 }}
