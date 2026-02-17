@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import CharacterSprite from '../CharacterSprite';
 import { ChevronRight, BookOpen } from 'lucide-react';
 
@@ -17,31 +18,23 @@ export default function Stage1Ravenclaw({ onNext }: Stage1RavenclawProps) {
 
   const texts = React.useMemo(() => [
     'Hmm... una mente que domina ecuaciones...',
-    
     'Detectando pasión por los números y las coordenadas...',
-    
     'Un piano resuena en tu alma, arte y lógica en armonía...',
-    
     'Hmm... una estratega nata, siempre un paso adelante en el ajedrez de la vida...',
-    
     'Inteligente, elocuente, hermosa por dentro y por fuera...',
-    
     'Difícil... muy difícil decisión.',
     'Veo talento, y una clara visión.',
-    
     'Hay bondad, sí, pero no es lo que te guía',
     'es la sed de saber lo que en ti confía.',
     'No te asustan los retos de la mente',
     'descifras enigmas, eres diferente.',
     'Tu espada es la lógica, tu escudo el saber',
     'en los libros y estrellas está tu poder.',
-    
     'Para aquellos con mente aguda y sagaz',
     'que encuentran en la duda su propia paz',
     'he tomado mi decisión, y la ley no cambio:',
-    
     '¡TU CAMINO ES RAVENCLAW!'
-  ], []); // Added empty dependency array
+  ], []);
 
   useEffect(() => {
     if (textPhase < texts.length) {
@@ -136,8 +129,16 @@ export default function Stage1Ravenclaw({ onNext }: Stage1RavenclawProps) {
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-b from-blue-700/50 to-blue-900/30 border-2 border-blue-400/60 flex items-center justify-center">
-                <span className="text-6xl md:text-7xl">&#x1F985;</span>
+              {/* Contenedor de la imagen del escudo */}
+              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-b from-blue-700/50 to-blue-900/30 border-2 border-blue-400/60 flex items-center justify-center overflow-hidden p-4">
+                <Image
+                  src="/ravenclaw-crest.png"
+                  alt="Ravenclaw Crest"
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-contain"
+                  priority
+                />
               </div>
             </motion.div>
 

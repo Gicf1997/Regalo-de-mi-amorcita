@@ -30,7 +30,8 @@ export default function Stage0Intro({ onNext }: Stage0IntroProps) {
           transition={{ delay: 0.8 }}
           className="text-xl md:text-2xl text-gray-300 mb-12 font-montserrat"
         >
-          Una experiencia que nos acercará aún más, creada para ti.
+          Un pequeño detalle por el día de los enamorados que hice con mucho amor para vos.
+          Y...  perdón por la espera, pero quería que fuera perfecto para ti.
         </motion.p>
       </motion.div>
 
