@@ -22,7 +22,7 @@ export default function Stage0Intro({ onNext }: Stage0IntroProps) {
         className="text-center"
       >
         <h1 className="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold text-[#d4af37] mb-4 drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]">
-          Lo que Siento por Tí
+          Para Mi Amorcita
         </h1>
         <motion.p
           initial={{ opacity: 0 }}
