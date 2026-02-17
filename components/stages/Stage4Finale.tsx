@@ -48,7 +48,7 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
   const letterParts = [
     'Mi Ali,',
 
-    '\nSé que para vos las fechas y los detalles importan. Por eso necesito que sepas: recuerdo cada uno.',
+    '\nSé que para vos las fechas y los detalles importan. Aquí tienes un detalle, unos numeros, unas palabras, un regalo para vos. Espero que te guste tanto como a mí me gustó hacerlo.',
 
     '\nComo Natsu usa el fuego para proteger y luchar por sus amigos, yo quiero protegerte con cada detalle que recuerdo, con cada esfuerzo que hago para ser mejor para vos.',
 
