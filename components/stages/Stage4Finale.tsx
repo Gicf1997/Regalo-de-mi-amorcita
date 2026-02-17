@@ -50,7 +50,7 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
 
     '\nSé que para vos las fechas y los detalles importan. Por eso necesito que sepas: recuerdo cada uno.',
 
-    '\nComo Natsu protege a sus nakama con fuego, yo quiero protegerte con cada detalle que recuerdo, con cada esfuerzo que hago para ser mejor para vos.',
+    '\nComo Natsu usa el fuego para proteger y luchar por sus amigos, yo quiero protegerte con cada detalle que recuerdo, con cada esfuerzo que hago para ser mejor para vos.',
 
     '\nComo las partículas entrelazadas de Dirac, lo que te pase a vos lo siento yo. Sin importar la distancia. Como la identidad de Euler une cinco mundos en una verdad, vos unís todo lo que soy en algo que tiene sentido.',
 
