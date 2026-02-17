@@ -6,6 +6,7 @@ import CharacterSprite from '../CharacterSprite';
 import MathGrapher from '../MathGrapher';
 import { Flame, Unlock, Heart, Atom, Infinity as InfinityIcon, Music } from 'lucide-react';
 import { EulerIdentity, PianoFibonacci, DiracBuildup, GoogolplexVisual } from './stage3-components';
+import Image from 'next/image';
 
 interface Stage3MathProps {
   onNext: () => void;
@@ -51,7 +52,7 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
           <CharacterSprite character="natsu" />
           <div className="text-left">
             <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-[#d4af37]">
-              Ecuaciones con Natsu Dragneel
+              El Enigma del Dragón
             </h2>
             <p className="text-sm text-gray-400 font-montserrat">
               Matemáticas, Física y Amor
@@ -76,7 +77,7 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
                   </h3>
                 </div>
                 <p className="text-gray-300 font-montserrat text-sm leading-relaxed">
-                  Para vos que amas las Matemáticas, el amor se expresa en ecuaciones paramétricas.
+                  Para una Licenciada en Matemáticas, el amor se expresa en ecuaciones paramétricas.
                 </p>
               </div>
 
@@ -213,17 +214,23 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
               <div className="text-center space-y-6">
                 <motion.div
                   animate={{
-                    textShadow: [
-                      '0 0 10px rgba(234,88,12,0.3)',
-                      '0 0 40px rgba(234,88,12,0.7)',
-                      '0 0 10px rgba(234,88,12,0.3)'
+                    filter: [
+                      'drop-shadow(0 0 10px rgba(234,88,12,0.3))',
+                      'drop-shadow(0 0 40px rgba(234,88,12,0.7))',
+                      'drop-shadow(0 0 10px rgba(234,88,12,0.3))'
                     ]
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
+                  className="flex flex-col items-center"
                 >
-                  <div className="text-5xl md:text-7xl font-bold text-white mb-2 font-math">
-                    (i∂̸ - m)ψ = 0
-                  </div>
+                  <Image
+                    src="/sprites/dirac-equation.jpg"
+                    alt="Ecuación de Dirac"
+                    width={500}
+                    height={300}
+                    className="w-full max-w-md h-auto mb-2"
+                    priority
+                  />
                   <p className="font-cinzel text-lg text-orange-400">
                     La Ecuación de Dirac
                   </p>

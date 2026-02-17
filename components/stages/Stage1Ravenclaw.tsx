@@ -1,9 +1,7 @@
 'use client';
 
-import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { useState, useEffect, useMemo } from 'react';
 import CharacterSprite from '../CharacterSprite';
 import { ChevronRight, BookOpen } from 'lucide-react';
 
@@ -16,23 +14,18 @@ export default function Stage1Ravenclaw({ onNext }: Stage1RavenclawProps) {
   const [displayedText, setDisplayedText] = useState('');
   const [showResult, setShowResult] = useState(false);
 
-  const texts = React.useMemo(() => [
-    'Hmm... una mente que domina ecuaciones...',
-    'Detectando pasión por los números y las coordenadas...',
-    'Un piano resuena en tu alma, arte y lógica en armonía...',
-    'Hmm... una estratega nata, siempre un paso adelante en el ajedrez de la vida...',
-    'Inteligente, elocuente, hermosa por dentro y por fuera...',
+  const texts = useMemo(() => [
+    'Hhmmm... veo mucho en vos...',
     'Difícil... muy difícil decisión.',
     'Veo talento, y una clara visión.',
-    'Hay bondad, sí, pero no es lo que te guía',
-    'es la sed de saber lo que en ti confía.',
-    'No te asustan los retos de la mente',
-    'descifras enigmas, eres diferente.',
-    'Tu espada es la lógica, tu escudo el saber',
-    'en los libros y estrellas está tu poder.',
+    'Veo pasión por el conocimiento, y una mente que siempre busca más.',
+    'Veo creatividad, y una forma única de ver el mundo.',
+    'Veo sabiduría, y una capacidad para entender lo que otros no pueden.',
     'Para aquellos con mente aguda y sagaz',
-    'que encuentran en la duda su propia paz',
+    'aquellos que valoran la inteligencia, la creatividad y la sabiduría por encima de todo,',
+    'aquellos que encuentran en la duda su propia paz',
     'he tomado mi decisión, y la ley no cambio:',
+
     '¡TU CAMINO ES RAVENCLAW!'
   ], []);
 
@@ -129,17 +122,7 @@ export default function Stage1Ravenclaw({ onNext }: Stage1RavenclawProps) {
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              {/* Contenedor de la imagen del escudo */}
-              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-b from-blue-700/50 to-blue-900/30 border-2 border-blue-400/60 flex items-center justify-center overflow-hidden p-4">
-                <Image
-                  src="/ravenclaw-crest.png"
-                  alt="Ravenclaw Crest"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-contain"
-                  priority
-                />
-              </div>
+              <CharacterSprite character="ravenclaw-crest" />
             </motion.div>
 
             <div className="text-center">
@@ -159,7 +142,7 @@ export default function Stage1Ravenclaw({ onNext }: Stage1RavenclawProps) {
                 aquellos de mente ágil siempre aprenderán con los de su clase.&rdquo;
               </p>
               <p className="text-blue-300/60 font-montserrat text-xs mt-3 italic">
-                Sabiduría, creatividad, ingenio... todo lo que eres y más, mi amor.
+                Amante de las Matemáticas, maestra de ajedrez, pianista... sin duda, Ravenclaw.
               </p>
             </div>
 
