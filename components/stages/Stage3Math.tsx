@@ -51,7 +51,7 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
           <CharacterSprite character="natsu" />
           <div className="text-left">
             <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-[#d4af37]">
-              Ecuaciones con Natsu.
+              Ecuaciones con Natsu Dragneel
             </h2>
             <p className="text-sm text-gray-400 font-montserrat">
               Matemáticas, Física y Amor
@@ -76,7 +76,7 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
                   </h3>
                 </div>
                 <p className="text-gray-300 font-montserrat text-sm leading-relaxed">
-                  Para vos que sos fan de las  Matemáticas, el amor se expresa en ecuaciones paramétricas.
+                  Para vos que amas las Matemáticas, el amor se expresa en ecuaciones paramétricas.
                 </p>
               </div>
 
@@ -221,8 +221,8 @@ export default function Stage3Math({ onNext }: Stage3MathProps) {
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                  <div className="text-5xl md:text-7xl font-bold text-white mb-2 font-montserrat">
-                    (i&#x2202;&#x0338; - m)&#x03C8; = 0
+                  <div className="text-5xl md:text-7xl font-bold text-white mb-2 font-math">
+                    (i∂̸ - m)ψ = 0
                   </div>
                   <p className="font-cinzel text-lg text-orange-400">
                     La Ecuación de Dirac

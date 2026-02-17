@@ -72,15 +72,15 @@ export function EulerIdentity({ onComplete }: { onComplete: () => void }) {
             }}
             transition={{ duration: 2.5, repeat: Infinity }}
           >
-            <div className="text-4xl md:text-6xl font-bold text-white font-montserrat">
-              e<sup className="text-cyan-400">i&pi;</sup> + 1 = 0
+            <div className="text-4xl md:text-6xl font-bold text-white font-math">
+              e<sup className="text-cyan-400">iπ</sup> + 1 = 0
             </div>
           </motion.div>
           <p className="text-emerald-300/80 font-montserrat text-sm leading-relaxed max-w-sm mx-auto">
             Euler unió cinco mundos diferentes de las matemáticas en una sola ecuación perfecta.
           </p>
           <p className="text-gray-400 font-montserrat text-sm italic">
-            Como nosotros: física y matemáticas, fuerza y delicadeza, juntos creamos algo perfecto.
+            Como nosotros: física y matemáticas, dragón y reina, juntos creamos algo perfecto.
           </p>
           <motion.button
             initial={{ opacity: 0 }}
@@ -191,7 +191,7 @@ export function PianoFibonacci({ onComplete }: { onComplete: () => void }) {
         className="bg-black/40 border border-[#d4af37]/20 rounded-lg p-4 space-y-3"
       >
         <p className="text-gray-300 font-montserrat text-sm leading-relaxed text-center">
-          Cómo cuando Yiruma toca, cada nota es un número que se convierte en emoción.
+          Cuando Yiruma toca, cada nota es un número que se convierte en emoción.
           Cada acorde es un teorema vivo.
         </p>
         <p className="text-[#d4af37]/80 font-montserrat text-sm leading-relaxed text-center italic">
@@ -230,9 +230,9 @@ export function DiracBuildup({ onComplete }: { onComplete: () => void }) {
 
   const parts = [
     { symbol: 'i', label: 'Unidad imaginaria', desc: 'Lo que no vemos pero sentimos' },
-    { symbol: '\u2202\u0338', label: 'Derivada parcial', desc: 'El cambio constante del universo' },
+    { symbol: '∂̸', label: 'Derivada parcial', desc: 'El cambio constante del universo' },
     { symbol: 'm', label: 'Masa', desc: 'Lo que nos da presencia en el mundo' },
-    { symbol: '\u03C8', label: 'Función de onda', desc: 'La esencia de toda partícula' },
+    { symbol: 'ψ', label: 'Función de onda', desc: 'La esencia de toda partícula' },
   ];
 
   return (
@@ -253,7 +253,7 @@ export function DiracBuildup({ onComplete }: { onComplete: () => void }) {
                 : 'bg-gray-900/30 border-gray-700/30'
             }`}
           >
-            <div className="text-3xl md:text-4xl font-bold text-white mb-1 font-montserrat">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-1 font-math">
               {part.symbol}
             </div>
             <div className="text-orange-400 text-sm font-cinzel">{part.label}</div>
@@ -294,12 +294,12 @@ export function GoogolplexVisual() {
   }, []);
 
   const comparisons = [
-    { label: 'Átomos en el universo observable', value: '10\u2078\u2070' },
-    { label: 'Googol', value: '10\u00B9\u2070\u2070' },
-    { label: 'Googolplex', value: '10^(10\u00B9\u2070\u2070)' },
-    { label: 'Estrellas en todas las galaxias', value: '~10\u00B2\u00B4' },
-    { label: 'Segundos desde el Big Bang', value: '~4\u00D710\u00B9\u2077' },
-    { label: 'Mi amor por ti', value: '> Todo eso junto' },
+    { label: 'Átomos en el universo observable', value: '10⁸⁰' },
+    { label: 'Googol', value: '10¹⁰⁰' },
+    { label: 'Googolplex', value: '10^(10¹⁰⁰)' },
+    { label: 'Estrellas en todas las galaxias', value: '~10²⁴' },
+    { label: 'Segundos desde el Big Bang', value: '~4×10¹⁷' },
+    { label: 'El amor que siento por ti', value: '> Todo eso junto' },
   ];
 
   return (
@@ -355,7 +355,7 @@ export function GoogolplexVisual() {
             }`}>
               {item.label}
             </span>
-            <span className={`font-montserrat font-bold ${
+            <span className={`font-math font-bold ${
               i === comparisons.length - 1 ? 'text-pink-400 text-lg' : 'text-white text-sm'
             }`}>
               {item.value}

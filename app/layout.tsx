@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Cinzel, Montserrat } from 'next/font/google';
+import { Cinzel, Montserrat, Noto_Sans_Math } from 'next/font/google';
 
 const cinzel = Cinzel({
   subsets: ['latin'],
@@ -11,6 +11,12 @@ const cinzel = Cinzel({
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat'
+});
+
+const notoSansMath = Noto_Sans_Math({
+  subsets: ['math'],
+  variable: '--font-math',
+  weight: '400'
 });
 
 export const metadata: Metadata = {
@@ -40,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${cinzel.variable} ${montserrat.variable} font-montserrat`}>{children}</body>
+      <body className={`${cinzel.variable} ${montserrat.variable} ${notoSansMath.variable} font-montserrat`}>{children}</body>
     </html>
   );
 }
