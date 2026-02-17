@@ -17,25 +17,30 @@ export default function Stage1Ravenclaw({ onNext }: Stage1RavenclawProps) {
 
   const texts = [
     'Hmm... una mente que domina ecuaciones...',
+    
     'Detectando pasión por los números y las coordenadas...',
+
     'Un piano resuena en tu alma, arte y lógica en armonía...',
+
     'Hmm... una estratega nata, siempre un paso adelante en el ajedrez de la vida...',
+
     'Inteligente, elocuente, hermosa por dentro y por fuera...',
-                    'Difícil... muy difícil decisión.',
-                    'Veo talento, y una clara visión.',
-                    'Hay bondad, sí, pero no es lo que te guía',
-                    'es la sed de saber lo que en ti confía.',
 
-                    'No te asustan los retos de la mente',
-                    'descifras enigmas, eres diferente.',
-                    'Tu espada es la lógica, tu escudo el saber',
-                    'en los libros y estrellas está tu poder.',
+    'Difícil... muy difícil decisión.',
+    'Veo talento, y una clara visión.',
 
-                    'Para aquellos con mente aguda y sagaz',
-                    'que encuentran en la duda su propia paz',
-                    'he tomado mi decisión, y la ley no cambio:',
+    'Hay bondad, sí, pero no es lo que te guía',
+    'es la sed de saber lo que en ti confía.',
+    'No te asustan los retos de la mente',
+    'descifras enigmas, eres diferente.',
+    'Tu espada es la lógica, tu escudo el saber',
+    'en los libros y estrellas está tu poder.',
 
-                    '¡TU CAMINO ES RAVENCLAW!'
+    'Para aquellos con mente aguda y sagaz',
+    'que encuentran en la duda su propia paz',
+    'he tomado mi decisión, y la ley no cambio:',
+
+    '¡TU CAMINO ES RAVENCLAW!'
   ];
 
   useEffect(() => {
