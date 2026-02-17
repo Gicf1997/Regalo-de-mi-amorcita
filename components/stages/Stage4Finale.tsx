@@ -117,74 +117,14 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
             ))}
           </div>
         </motion.div>
-
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 6.5 }}
-          className="w-full bg-black/60 backdrop-blur-md border border-green-500/40 rounded-lg p-5"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
-              <Music className="w-4 h-4 text-black" />
-            </div>
-            <h3 className="font-cinzel text-lg text-green-400">
-              Nuestra Playlist
-            </h3>
-          </div>
-          <div className="space-y-2">
-            {[
-              { id: 'yiruma', title: 'River Flows in You', artist: 'Yiruma' },
-              { id: 'eres', title: 'Eres', artist: 'Cafe Tacvba' },
-              { id: 'noteimaginas', title: 'No te imaginas', artist: 'Yuridia' }
-            ].map(song => (
-              <motion.button
-                key={song.id}
-                onClick={() => toggleSong(song.id)}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 ${
-                  currentSong === song.id
-                    ? 'bg-green-600/80 shadow-[0_0_16px_rgba(34,197,94,0.4)]'
-                    : 'bg-white/5 hover:bg-white/10'
-                }`}
-                whileTap={{ scale: 0.98 }}
-              >
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                  currentSong === song.id ? 'bg-white/20' : 'bg-green-500/20'
-                }`}>
-                  {currentSong === song.id ? (
-                    <Pause className="w-4 h-4 text-white" />
-                  ) : (
-                    <Play className="w-4 h-4 text-green-400" />
-                  )}
-                </div>
-                <div className="flex-1 text-left">
-                  <p className="text-white text-sm font-semibold">{song.title}</p>
-                  <p className="text-gray-400 text-xs">{song.artist}</p>
-                </div>
-                {currentSong === song.id && (
-                  <div className="flex items-end gap-[2px] h-4">
-                    {[0, 1, 2, 3].map(i => (
-                      <motion.div
-                        key={i}
-                        className="w-[3px] bg-white rounded-full"
-                        animate={{ height: ['4px', '16px', '8px', '14px', '4px'] }}
-                        transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }}
-                      />
-                    ))}
-                  </div>
-                )}
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
-
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 8 }}
           className="text-center text-gray-500 font-montserrat text-sm italic pb-8"
         >
-          Con amor infinito, para siempre tuyo. &mdash; Tu Dragón
+         Hay quien dice 'mañana' para no decidir, yo te digo 'ahora' porque ya te elegí.
+            Soy tu compañero, tu refugio y, sobre todo, tu hombre.
         </motion.p>
       </div>
     </motion.div>
