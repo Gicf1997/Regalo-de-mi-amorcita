@@ -94,6 +94,13 @@ export const relationshipConfig = {
     diracEquation: '/sprites/dirac-equation.jpg',
     portada: '/sprites/portada.jpg',
   },
+
+  game: {
+    enabled: true,
+    targetScore: 30,
+    title: 'Atrapa Mi Amor',
+    instructions: 'Mueve tu dedo o mouse para atrapar corazones, flores y estrellas',
+  },
 };
 
 export type RelationshipConfig = typeof relationshipConfig;

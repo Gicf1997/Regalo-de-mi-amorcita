@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import Stage0Intro from '@/components/stages/Stage0Intro';
 import Stage1Ravenclaw from '@/components/stages/Stage1Ravenclaw';
 import Stage2Chess from '@/components/stages/Stage2Chess';
+import Stage25Game from '@/components/stages/Stage25Game';
 import Stage3Math from '@/components/stages/Stage3Math';
 import Stage35Questions from '@/components/stages/Stage35Questions';
 import Stage5Timeline from '@/components/stages/Stage5Timeline';
@@ -20,7 +21,7 @@ export default function Home() {
   const [stage, setStage] = useState(0);
 
   const nextStage = () => {
-    setStage((prev) => Math.min(prev + 1, 6));
+    setStage((prev) => Math.min(prev + 1, 7));
   };
 
   return (
@@ -32,10 +33,11 @@ export default function Home() {
           {stage === 0 && <Stage0Intro key="stage0" onNext={nextStage} />}
           {stage === 1 && <Stage1Ravenclaw key="stage1" onNext={nextStage} />}
           {stage === 2 && <Stage2Chess key="stage2" onNext={nextStage} />}
-          {stage === 3 && <Stage3Math key="stage3" onNext={nextStage} />}
-          {stage === 4 && <Stage35Questions key="stage35" onNext={nextStage} />}
-          {stage === 5 && <Stage5Timeline key="stage5" onNext={nextStage} />}
-          {stage === 6 && <Stage4Finale key="stage4" />}
+          {stage === 3 && <Stage25Game key="stage25" onNext={nextStage} />}
+          {stage === 4 && <Stage3Math key="stage3" onNext={nextStage} />}
+          {stage === 5 && <Stage35Questions key="stage35" onNext={nextStage} />}
+          {stage === 6 && <Stage5Timeline key="stage5" onNext={nextStage} />}
+          {stage === 7 && <Stage4Finale key="stage4" />}
         </AnimatePresence>
       </div>
     </main>
