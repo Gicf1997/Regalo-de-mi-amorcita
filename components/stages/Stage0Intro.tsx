@@ -22,7 +22,7 @@ export default function Stage0Intro({ onNext }: Stage0IntroProps) {
         className="text-center"
       >
         <h1 className="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold text-[#d4af37] mb-4 drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]">
-          Para Mi Amorcita
+          Un Mes Juntos
         </h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -30,8 +30,8 @@ export default function Stage0Intro({ onNext }: Stage0IntroProps) {
           transition={{ delay: 0.8 }}
           className="text-xl md:text-2xl text-gray-300 mb-12 font-montserrat"
         >
-          Un pequeño detalle por el día de los enamorados que hice con mucho amor para vos.
-          Y...  perdón por la espera, pero quería que fuera perfecto para ti.
+          Hace un mes te sorprendí, hoy quiero hacerlo de nuevo.
+          Porque cada día contigo merece ser celebrado.
         </motion.p>
       </motion.div>
 
@@ -57,7 +57,7 @@ export default function Stage0Intro({ onNext }: Stage0IntroProps) {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 text-gray-500 text-sm font-montserrat"
       >
-        Y...  perdón por la espera, pero quería que fuera perfecto para ti.
+        23 de Marzo, 2026 - Un mes de amor
       </motion.div>
     </motion.div>
   );

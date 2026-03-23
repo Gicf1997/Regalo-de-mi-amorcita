@@ -48,15 +48,19 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
   const letterParts = [
     'Mi Ali,',
 
-    '\nSé que para vos las fechas y los detalles importan. Aquí tienes un detalle, unos numeros, unas palabras, un regalo para vos. Espero que te guste tanto como a mí me gustó hacerlo.',
+    '\nHa pasado un mes desde que te di esa primera sorpresa. Treinta días que han sido como un parpadeo y una eternidad a la vez. Cada momento contigo confirma que elegí bien, que vos sos mi destino.',
 
-    '\nComo Natsu usa el fuego para proteger y luchar por sus amigos, yo quiero protegerte con cada detalle que recuerdo, con cada esfuerzo que hago para ser mejor para vos.',
+    '\nEn este mes aprendí que el amor no es solo fuego como el de Natsu, es también la calma que encuentro cuando te veo sonreír. Es saber que incluso en mis peores días, pensarte me hace mejor persona.',
 
-    '\nComo las partículas entrelazadas de Dirac, lo que te pase a vos lo siento yo. Sin importar la distancia. Como la identidad de Euler une cinco mundos en una verdad, vos unís todo lo que soy en algo que tiene sentido.',
+    '\nCada día que pasa, mi amor por vos crece exponencialmente. No es una función lineal, es una curva que tiende al infinito. Como Dirac entendió el universo cuántico, yo cada día entiendo mejor lo afortunado que soy de tenerte.',
 
-    '\nTe amo más que un Googolplex, más que todos los números que el universo puede contener, más que todas las estrellas doradas que flotan en el cielo.',
+    '\nUn mes es solo el comienzo de nuestra ecuación. Hay infinitos meses por delante, infinitas sonrisas, infinitos momentos. Y quiero vivirlos todos con vos.',
 
-    '\nCon todo el amor de mi alma,\nTu Novio Gus'
+    '\nTe amo más hoy que hace un mes, y mañana te amaré más que hoy. Porque así funciona esto, mi amor: crece, evoluciona, se vuelve más fuerte.',
+
+    '\nGracias por este mes perfecto. Por cada mensaje, cada risa, cada "te amo". Por ser mi Ali, mi reina, mi todo.',
+
+    '\nCon todo el amor que crece cada día,\nTu Novio Gus\n\nP.D: Perdón por hacerte esperar esta sorpresa. Quería que fuera tan especial como vos.'
   ];
 
   function toggleSong(song: string) {
@@ -84,8 +88,9 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
             <Heart className="w-16 h-16 md:w-20 md:h-20 text-pink-500 fill-pink-500" />
           </motion.div>
           <h2 className="font-cinzel text-3xl md:text-5xl font-bold text-[#d4af37] text-center">
-            Para Mi Reina
+            Un Mes de Amor
           </h2>
+          <p className="font-montserrat text-gray-400 text-sm">23 de Febrero - 23 de Marzo, 2026</p>
           <CharacterSprite character="happy" />
         </motion.div>
 
@@ -117,10 +122,30 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
             ))}
           </div>
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 10 }}
+          className="w-full max-w-xl bg-gradient-to-br from-pink-500/10 to-[#d4af37]/10 backdrop-blur-sm border border-pink-500/30 rounded-lg p-6 text-center space-y-2"
+        >
+          <p className="text-pink-300 font-cinzel text-lg font-semibold">
+            30 días de amor
+          </p>
+          <p className="text-gray-400 font-montserrat text-sm">
+            720 horas de pensarte
+          </p>
+          <p className="text-gray-400 font-montserrat text-sm">
+            43,200 minutos de quererte
+          </p>
+          <p className="text-[#d4af37] font-montserrat text-sm font-semibold">
+            ∞ razones para amarte
+          </p>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 8 }}
+          transition={{ delay: 11 }}
           className="text-center text-gray-500 font-montserrat text-sm italic pb-8"
         >
          Hay quien dice &apos;mañana&apos; para no decidir, yo te digo &apos;ahora&apos; porque ya te elegí.

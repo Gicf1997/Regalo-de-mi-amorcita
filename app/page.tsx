@@ -7,6 +7,7 @@ import Stage0Intro from '@/components/stages/Stage0Intro';
 import Stage1Ravenclaw from '@/components/stages/Stage1Ravenclaw';
 import Stage2Chess from '@/components/stages/Stage2Chess';
 import Stage3Math from '@/components/stages/Stage3Math';
+import Stage5Timeline from '@/components/stages/Stage5Timeline';
 import Stage4Finale from '@/components/stages/Stage4Finale';
 
 const Background3D = dynamic(() => import('@/components/Background3D'), {
@@ -18,7 +19,7 @@ export default function Home() {
   const [stage, setStage] = useState(0);
 
   const nextStage = () => {
-    setStage((prev) => Math.min(prev + 1, 4));
+    setStage((prev) => Math.min(prev + 1, 5));
   };
 
   return (
@@ -31,7 +32,8 @@ export default function Home() {
           {stage === 1 && <Stage1Ravenclaw key="stage1" onNext={nextStage} />}
           {stage === 2 && <Stage2Chess key="stage2" onNext={nextStage} />}
           {stage === 3 && <Stage3Math key="stage3" onNext={nextStage} />}
-          {stage === 4 && <Stage4Finale key="stage4" />}
+          {stage === 4 && <Stage5Timeline key="stage5" onNext={nextStage} />}
+          {stage === 5 && <Stage4Finale key="stage4" />}
         </AnimatePresence>
       </div>
     </main>
