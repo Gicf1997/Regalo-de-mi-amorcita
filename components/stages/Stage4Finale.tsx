@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import CharacterSprite from '../CharacterSprite';
 import { Heart, Music, Play, Pause } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { relationshipConfig } from '@/lib/relationship-config';
 
 interface Stage4FinaleProps {
   onNext?: () => void;
@@ -45,24 +46,6 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
     return () => clearInterval(interval);
   }, []);
 
-  const letterParts = [
-    'Mi Ali,',
-
-    '\nHa pasado un mes desde que te di esa primera sorpresa. Treinta días que han sido como un parpadeo y una eternidad a la vez. Cada momento contigo confirma que elegí bien, que vos sos mi destino.',
-
-    '\nEn este mes aprendí que el amor no es solo fuego como el de Natsu, es también la calma que encuentro cuando te veo sonreír. Es saber que incluso en mis peores días, pensarte me hace mejor persona.',
-
-    '\nCada día que pasa, mi amor por vos crece exponencialmente. No es una función lineal, es una curva que tiende al infinito. Como Dirac entendió el universo cuántico, yo cada día entiendo mejor lo afortunado que soy de tenerte.',
-
-    '\nUn mes es solo el comienzo de nuestra ecuación. Hay infinitos meses por delante, infinitas sonrisas, infinitos momentos. Y quiero vivirlos todos con vos.',
-
-    '\nTe amo más hoy que hace un mes, y mañana te amaré más que hoy. Porque así funciona esto, mi amor: crece, evoluciona, se vuelve más fuerte.',
-
-    '\nGracias por este mes perfecto. Por cada mensaje, cada risa, cada "te amo". Por ser mi Ali, mi reina, mi todo.',
-
-    '\nCon todo el amor que crece cada día,\nTu Novio Gus\n\nP.D: Perdón por hacerte esperar esta sorpresa. Quería que fuera tan especial como vos.'
-  ];
-
   function toggleSong(song: string) {
     setCurrentSong(prev => prev === song ? null : song);
   }
@@ -88,9 +71,9 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
             <Heart className="w-16 h-16 md:w-20 md:h-20 text-pink-500 fill-pink-500" />
           </motion.div>
           <h2 className="font-cinzel text-3xl md:text-5xl font-bold text-[#d4af37] text-center">
-            Un Mes de Amor
+            {relationshipConfig.finaleLetter.title}
           </h2>
-          <p className="font-montserrat text-gray-400 text-sm">23 de Febrero - 23 de Marzo, 2026</p>
+          <p className="font-montserrat text-gray-400 text-sm">{relationshipConfig.finaleLetter.date}</p>
           <CharacterSprite character="happy" />
         </motion.div>
 
@@ -101,7 +84,7 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
           className="w-full bg-gradient-to-br from-black/80 to-[#d4af37]/5 backdrop-blur-xl border-2 border-[#d4af37]/40 rounded-lg p-6 md:p-8 shadow-[0_0_40px_rgba(212,175,55,0.2)]"
         >
           <div className="space-y-0">
-            {letterParts.map((part, i) => (
+            {relationshipConfig.finaleLetter.paragraphs.map((part, i) => (
               <motion.p
                 key={i}
                 initial={{ opacity: 0, y: 10 }}
@@ -110,9 +93,9 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
                 className={`whitespace-pre-line font-montserrat leading-relaxed ${
                   i === 0
                     ? 'text-[#d4af37] text-xl font-cinzel font-semibold'
-                    : i === letterParts.length - 1
+                    : i === relationshipConfig.finaleLetter.paragraphs.length - 1
                     ? 'text-[#d4af37] italic font-semibold mt-4'
-                    : i === letterParts.length - 2
+                    : i === relationshipConfig.finaleLetter.paragraphs.length - 2
                     ? 'text-pink-300 font-semibold'
                     : 'text-gray-300'
                 }`}
@@ -129,13 +112,13 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
           className="w-full max-w-xl bg-gradient-to-br from-pink-500/10 to-[#d4af37]/10 backdrop-blur-sm border border-pink-500/30 rounded-lg p-6 text-center space-y-2"
         >
           <p className="text-pink-300 font-cinzel text-lg font-semibold">
-            30 días de amor
+            {relationshipConfig.stats.days} días de amor
           </p>
           <p className="text-gray-400 font-montserrat text-sm">
-            720 horas de pensarte
+            {relationshipConfig.stats.hours.toLocaleString()} horas de pensarte
           </p>
           <p className="text-gray-400 font-montserrat text-sm">
-            43,200 minutos de quererte
+            {relationshipConfig.stats.minutes.toLocaleString()} minutos de quererte
           </p>
           <p className="text-[#d4af37] font-montserrat text-sm font-semibold">
             ∞ razones para amarte
@@ -148,8 +131,7 @@ export default function Stage4Finale({ onNext }: Stage4FinaleProps) {
           transition={{ delay: 11 }}
           className="text-center text-gray-500 font-montserrat text-sm italic pb-8"
         >
-         Hay quien dice &apos;mañana&apos; para no decidir, yo te digo &apos;ahora&apos; porque ya te elegí.
-            Soy tu novio, tu amorcito, tu refugio y, sobre todo, tu hombre.
+         {relationshipConfig.finaleLetter.closingMessage}
         </motion.p>
       </div>
     </motion.div>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
+import { relationshipConfig } from '@/lib/relationship-config';
 
 interface Stage0IntroProps {
   onNext: () => void;
@@ -22,7 +23,7 @@ export default function Stage0Intro({ onNext }: Stage0IntroProps) {
         className="text-center"
       >
         <h1 className="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold text-[#d4af37] mb-4 drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]">
-          Un Mes Juntos
+          {relationshipConfig.intro.title}
         </h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -30,8 +31,7 @@ export default function Stage0Intro({ onNext }: Stage0IntroProps) {
           transition={{ delay: 0.8 }}
           className="text-xl md:text-2xl text-gray-300 mb-12 font-montserrat"
         >
-          Hace un mes te sorprendí, hoy quiero hacerlo de nuevo.
-          Porque cada día contigo merece ser celebrado.
+          {relationshipConfig.intro.subtitle}
         </motion.p>
       </motion.div>
 
@@ -57,7 +57,7 @@ export default function Stage0Intro({ onNext }: Stage0IntroProps) {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 text-gray-500 text-sm font-montserrat"
       >
-        23 de Marzo, 2026 - Un mes de amor
+        {relationshipConfig.intro.message}
       </motion.div>
     </motion.div>
   );

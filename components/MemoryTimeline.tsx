@@ -2,46 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Heart, Sparkles, Star, Zap } from 'lucide-react';
-
-interface Memory {
-  date: string;
-  title: string;
-  description: string;
-  icon: 'heart' | 'sparkles' | 'star' | 'zap';
-}
-
-const memories: Memory[] = [
-  {
-    date: '23 Feb',
-    title: 'El Primer Día',
-    description: 'Cuando todo comenzó con una sorpresa especial',
-    icon: 'heart'
-  },
-  {
-    date: 'Semana 1',
-    title: 'Descubriendo Juntos',
-    description: 'Cada mensaje, cada sonrisa, construyendo nuestro mundo',
-    icon: 'sparkles'
-  },
-  {
-    date: 'Semana 2',
-    title: 'Creciendo en Amor',
-    description: 'El amor que se hace más fuerte con cada día',
-    icon: 'star'
-  },
-  {
-    date: 'Semana 3',
-    title: 'Momentos Mágicos',
-    description: 'Las risas, los planes, los sueños compartidos',
-    icon: 'zap'
-  },
-  {
-    date: '23 Mar',
-    title: 'Un Mes de Nosotros',
-    description: 'Y esto es solo el comienzo de nuestra historia',
-    icon: 'heart'
-  }
-];
+import { relationshipConfig } from '@/lib/relationship-config';
 
 const iconComponents = {
   heart: Heart,
@@ -59,14 +20,14 @@ export default function MemoryTimeline() {
       className="w-full max-w-2xl mx-auto px-4"
     >
       <h3 className="font-cinzel text-2xl md:text-3xl font-bold text-[#d4af37] text-center mb-8">
-        Nuestro Primer Mes
+        {relationshipConfig.timeline.title}
       </h3>
 
       <div className="relative">
         <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#d4af37] via-pink-500 to-[#d4af37]" />
 
         <div className="space-y-6">
-          {memories.map((memory, index) => {
+          {relationshipConfig.timeline.memories.map((memory, index) => {
             const Icon = iconComponents[memory.icon];
             return (
               <motion.div
